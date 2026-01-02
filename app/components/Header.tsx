@@ -16,7 +16,7 @@ export default function Header() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 40 32"
-                  className="h-8 w-8 text-blue-600"
+                  className="h-8 w-8 text-blue-900"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -24,21 +24,21 @@ export default function Header() {
                   focusable="false"
                 >
                   {/* Roof */}
-                  <polygon points="4,10 20,3 36,10" className="fill-blue-100 stroke-blue-600" />
+                  <polygon points="4,10 20,3 36,10" className="fill-blue-100 stroke-blue-900" />
                   {/* Base */}
-                  <rect x="6" y="27" width="28" height="3" rx="1.5" className="fill-blue-100 stroke-blue-600" />
+                  <rect x="6" y="27" width="28" height="3" rx="1.5" className="fill-blue-100 stroke-blue-900" />
                   {/* Steps */}
-                  <rect x="7" y="24" width="26" height="2" rx="1" className="fill-white stroke-blue-600" />
+                  <rect x="7" y="24" width="26" height="2" rx="1" className="fill-white stroke-blue-900" />
                   {/* Columns */}
-                  <rect x="8" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-600" />
-                  <rect x="13" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-600" />
-                  <rect x="18" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-600" />
-                  <rect x="23" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-600" />
-                  <rect x="28" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-600" />
+                  <rect x="8" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-900" />
+                  <rect x="13" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-900" />
+                  <rect x="18" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-900" />
+                  <rect x="23" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-900" />
+                  <rect x="28" y="11" width="2" height="13" rx="1" className="fill-white stroke-blue-900" />
                   {/* Architrave */}
-                  <rect x="6" y="10" width="28" height="3" rx="1.2" className="fill-blue-100 stroke-blue-600" />
+                  <rect x="6" y="10" width="28" height="3" rx="1.2" className="fill-blue-100 stroke-blue-900" />
                 </svg>
-                <span className="text-blue-600 font-bold text-3xl tracking-tight">UNIFAIR</span>
+                <span className="text-blue-900 font-bold text-3xl tracking-tight">UNIFAIR</span>
               </span>
             </div>
           </Link>
@@ -112,18 +112,8 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="flex items-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-none font-semibold transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <button className="hidden sm:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-md font-semibold transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5">
               Register Now
-            </button>
-            
-            {/* Mobile Menu Button */}
-            <button 
-              className="md:hidden p-2 text-gray-700 hover:text-blue-600"
-              aria-label="Toggle menu"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
             </button>
           </div>
         </div>

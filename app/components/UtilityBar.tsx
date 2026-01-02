@@ -6,12 +6,12 @@ export default function UtilityBar() {
   const [language, setLanguage] = useState<'EN' | 'AR'>('EN');
 
   return (
-    <div className="bg-gray-900 text-white py-2.5 px-4 border-b border-gray-800">
+    <div className="bg-white text-blue-900 py-2.5 px-4 ">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-sm">
         <div className="flex flex-wrap items-center gap-4">
           <a 
             href="tel:+1234567890" 
-            className="hover:text-gray-300 transition-colors flex items-center gap-1"
+            className="hover:text-blue-900 transition-colors flex items-center gap-1"
             aria-label="Call us"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -21,7 +21,7 @@ export default function UtilityBar() {
           </a>
           <a 
             href="mailto:info@unifair.com" 
-            className="hover:text-gray-300 transition-colors flex items-center gap-1"
+            className="hover:text-blue-900 transition-colors flex items-center gap-1"
             aria-label="Email us"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,7 +33,7 @@ export default function UtilityBar() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setLanguage(language === 'EN' ? 'AR' : 'EN')}
-            className="flex items-center gap-2 px-3 py-1 rounded hover:bg-gray-800 transition-colors"
+            className="flex items-center gap-2 px-3 py-1 rounded hover:bg-blue-900 transition-colors"
             aria-label="Switch language"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

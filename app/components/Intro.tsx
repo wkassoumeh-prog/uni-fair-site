@@ -3,10 +3,9 @@ export default function Intro() {
     <section id="about" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mb-6 tracking-tight">
             Why University Fair?
           </h2>
-          
           <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
             <p>
               The University Fair is your gateway to discovering the perfect academic path. With over 200 universities from 50+ countries, this premier event brings together world-class institutions, innovative programs, and life-changing opportunities under one roof.
@@ -22,7 +21,7 @@ export default function Intro() {
           <div className="mt-8">
             <a 
               href="#exhibitors" 
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors group"
+              className="inline-flex items-center gap-2 text-blue-900 hover:text-blue-700 font-semibold transition-colors group"
             >
               Explore Participating Universities
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

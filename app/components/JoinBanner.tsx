@@ -36,45 +36,45 @@ export default function JoinBanner() {
   }, []);
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="py-12 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text Content */}
-          <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+          <div className="text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 tracking-tight">
               Join Us
             </h2>
-            <h3 className="text-2xl sm:text-3xl font-semibold text-blue-600 mb-6">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-blue-900 mb-6">
               University Fair 2024
             </h3>
             
             {/* Countdown */}
-            <div className="mb-8">
+            <div className="mb-8 flex flex-col items-center lg:items-start">
               <p className="text-gray-600 mb-4 font-medium">Event starts in:</p>
-              <div className="grid grid-cols-4 gap-4 max-w-md">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-md">
                 <div className="bg-white rounded-lg p-4 shadow-md text-center transition-transform hover:scale-105">
-                  <div className="text-3xl font-bold text-gray-900">{String(timeLeft.days).padStart(2, '0')}</div>
-                  <div className="text-sm text-gray-600 mt-1">Days</div>
+                  <div className="text-3xl font-bold text-blue-900">{String(timeLeft.days).padStart(2, '0')}</div>
+                  <div className="text-sm text-gray-600 mt-1 uppercase tracking-wider text-xs font-semibold">Days</div>
                 </div>
                 <div className="bg-white rounded-lg p-4 shadow-md text-center transition-transform hover:scale-105">
-                  <div className="text-3xl font-bold text-gray-900">{String(timeLeft.hours).padStart(2, '0')}</div>
-                  <div className="text-sm text-gray-600 mt-1">Hours</div>
+                  <div className="text-3xl font-bold text-blue-900">{String(timeLeft.hours).padStart(2, '0')}</div>
+                  <div className="text-sm text-gray-600 mt-1 uppercase tracking-wider text-xs font-semibold">Hours</div>
                 </div>
                 <div className="bg-white rounded-lg p-4 shadow-md text-center transition-transform hover:scale-105">
-                  <div className="text-3xl font-bold text-gray-900">{String(timeLeft.minutes).padStart(2, '0')}</div>
-                  <div className="text-sm text-gray-600 mt-1">Minutes</div>
+                  <div className="text-3xl font-bold text-blue-900">{String(timeLeft.minutes).padStart(2, '0')}</div>
+                  <div className="text-sm text-gray-600 mt-1 uppercase tracking-wider text-xs font-semibold">Mins</div>
                 </div>
                 <div className="bg-white rounded-lg p-4 shadow-md text-center transition-transform hover:scale-105">
-                  <div className="text-3xl font-bold text-gray-900">{String(timeLeft.seconds).padStart(2, '0')}</div>
-                  <div className="text-sm text-gray-600 mt-1">Seconds</div>
+                  <div className="text-3xl font-bold text-blue-900">{String(timeLeft.seconds).padStart(2, '0')}</div>
+                  <div className="text-sm text-gray-600 mt-1 uppercase tracking-wider text-xs font-semibold">Secs</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Side - Event Card */}
-          <div className="lg:flex lg:justify-end">
-            <div className="bg-white rounded-xl shadow-xl overflow-hidden max-w-md w-full transition-transform hover:shadow-2xl hover:-translate-y-1">
+          <div className="flex justify-center lg:justify-end">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-md w-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-gray-100">
               {/* Map Image */}
               <div className="relative h-48 bg-gray-200">
                 <Image
@@ -88,7 +88,7 @@ export default function JoinBanner() {
               {/* Card Content */}
               <div className="p-6">
                 <div className="mb-4">
-                  <div className="flex items-center gap-2 text-blue-600 mb-2">
+                  <div className="flex items-center gap-2 text-blue-900 mb-2">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
