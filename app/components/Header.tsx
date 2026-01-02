@@ -43,78 +43,101 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Menu */}
-          {/* Responsive Menu */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="#home" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Home
-            </Link>
-            <Link href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              About
-            </Link>
-            <Link href="#exhibitors" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Exhibitors
-            </Link>
-            <Link href="#sponsers" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Sponsers
-            </Link>
-            <Link href="#program" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Program
-            </Link>
-            <Link href="#visitors" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Visitors
-            </Link>
-            <Link href="#VIP" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              VIP
-            </Link>
-            <Link href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Contact
-            </Link>
-          </div>
-          {/* Mobile Navigation (dropdown) */}
-          <div className="md:hidden">
-            {/* Use a simple dropdown menu for mobile; controlled by checkbox hack or you can integrate state logic if desired */}
-            <input type="checkbox" id="mobile-menu-toggle" className="hidden peer" />
-            <label htmlFor="mobile-menu-toggle" className="cursor-pointer flex items-center px-2 py-2 text-gray-700 hover:text-blue-600">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </label>
-            <div className="absolute top-20 left-0 right-0 z-40 bg-white shadow-lg border-t border-gray-100 hidden peer-checked:block">
-              <div className="flex flex-col items-start px-6 py-4 gap-2">
-                <Link href="#home" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
-                  Home
-                </Link>
-                <Link href="#about" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
-                  About
-                </Link>
-                <Link href="#exhibitors" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
-                  Exhibitors
-                </Link>
-                <Link href="#sponsers" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
-                  Sponsers
-                </Link>
-                <Link href="#program" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
-                  Program
-                </Link>
-                <Link href="#visitors" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
-                  Visitors
-                </Link>
-                <Link href="#VIP" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
-                  VIP
-                </Link>
-                <Link href="#contact" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
-                  Contact
-                </Link>
+          {/* Desktop/Menu Layout: Use flex-grow trick for proper spacing at all breakpoints */}
+          <div className="flex-1 flex items-center min-w-0 justify-end">
+            <div className="hidden lg:flex items-center gap-8 flex-shrink-0">
+              <Link href="#home" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Home
+              </Link>
+              <Link href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                About
+              </Link>
+              <Link href="#exhibitors" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Exhibitors
+              </Link>
+              <Link href="#sponsers" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Sponsers
+              </Link>
+              <Link href="#program" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Program
+              </Link>
+              <Link href="#visitors" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Visitors
+              </Link>
+              <Link href="#VIP" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                VIP
+              </Link>
+              <Link href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Contact
+              </Link>
+            </div>
+
+            {/* Tablet Menu: Visible between md and lg only (md:block, lg:hidden) */}
+            <div className="hidden md:flex lg:hidden items-center gap-5 flex-wrap ml-auto">
+              <Link href="#home" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm">
+                Home
+              </Link>
+              <Link href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm">
+                About
+              </Link>
+              <Link href="#exhibitors" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm">
+                Exhibitors
+              </Link>
+              <Link href="#sponsers" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm">
+                Sponsers
+              </Link>
+              <Link href="#program" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm">
+                Program
+              </Link>
+              <Link href="#visitors" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm">
+                Visitors
+              </Link>
+              <Link href="#VIP" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm">
+                VIP
+              </Link>
+              <Link href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm">
+                Contact
+              </Link>
+            </div>
+
+            {/* Mobile Navigation (dropdown) */}
+            <div className="md:hidden ml-auto flex items-center">
+              {/* Menu Toggle */} 
+              <input type="checkbox" id="mobile-menu-toggle" className="hidden peer" />
+              <label htmlFor="mobile-menu-toggle" className="cursor-pointer flex items-center px-2 py-2 text-gray-700 hover:text-blue-600">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </label>
+              <div className="absolute top-20 left-0 right-0 z-40 bg-white shadow-lg border-t border-gray-100 hidden peer-checked:block">
+                <div className="flex flex-col items-start px-6 py-4 gap-2">
+                  <Link href="#home" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
+                    Home
+                  </Link>
+                  <Link href="#about" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
+                    About
+                  </Link>
+                  <Link href="#exhibitors" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
+                    Exhibitors
+                  </Link>
+                  <Link href="#sponsers" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
+                    Sponsers
+                  </Link>
+                  <Link href="#program" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
+                    Program
+                  </Link>
+                  <Link href="#visitors" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
+                    Visitors
+                  </Link>
+                  <Link href="#VIP" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
+                    VIP
+                  </Link>
+                  <Link href="#contact" className="w-full text-gray-700 hover:text-blue-600 py-2 font-medium transition-colors" onClick={() => (document.getElementById('mobile-menu-toggle') as HTMLInputElement).checked = false}>
+                    Contact
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="flex items-center gap-4">
-            <button className="hidden sm:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-md font-semibold transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5">
-              Register Now
-            </button>
           </div>
         </div>
       </nav>
